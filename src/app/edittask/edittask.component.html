@@ -7,7 +7,7 @@
         <div class="row">
             <label for="projectName" class="col-md-4">Project:</label>
             <input type="text" class="col-md-5" id="searchProject" name="searchProject" #searchProject="ngModel" [(ngModel)]="projectName" disabled placeholder="Search Project">    
-            <button type="button" class="col-md-1  btn btn-danger" disabled style="border-radius: 45%;margin-left:20px" (click)=getProjectPopup()>Search</button>
+            <button type="button" class="col-md-1  btn" disabled style="margin-left:20px" (click)=getProjectPopup()>Search</button>
         </div>
         <br>  
       <div class="row">
@@ -33,7 +33,7 @@
         <label for="parentTask" class="col-md-4" >Parent Task</label>
         <input [disabled] = "!checkBoxSelect" class="col-md-5" type="text" [(ngModel)]="parentTaskName"   name="parentTaskName" id="parentTaskName" required>
 
-        <button [disabled] = "!checkBoxSelect" type="button" class="col-md-1  btn btn-danger" style="border-radius: 45%;margin-left:20px" (click)=getParentPopup()>Search</button>
+        <button [disabled] = "!checkBoxSelect" type="button" class="col-md-1  btn" style="margin-left:20px" (click)=getParentPopup()>Search</button>
       </div>
       <br>
       <div class="row">
@@ -48,15 +48,15 @@
         <label for="user" class="col-md-4" >User:</label>
         <input class="col-md-5" type="text" [(ngModel)]="userName"  disabled name="userName" id="userName" required>
 
-        <button type="button" class="col-md-1  btn btn-danger" disabled style="border-radius: 45%;margin-left:20px" (click)=getProjectPopup()>Search</button>
+        <button type="button" class="col-md-1  btn" disabled style="margin-left:20px" (click)=getProjectPopup()>Search</button>
       </div>
     <br>
     <br>
     <div class="row">
         <div class="col-md-5"></div>
       <div class="col-md-6">
-      <button type="submit" class="btn btn-success" style="margin-right:20px" (click)="updateTask()">Update Task</button>  
-      <button type="cancel" routerLink="/viewtask" style="margin-left:20px" class="btn btn-primary">Cancel</button>
+      <button type="submit" class="btn" style="margin-right:20px" (click)="updateTask()">Update Task</button>  
+      <button type="cancel" routerLink="/viewtask" style="margin-left:20px" class="btn">Cancel</button>
       </div>
     </div>
       <br>
@@ -68,7 +68,7 @@
   </div>
   </div>
 
-  <button type="button" id="userModalhide" class="btn btn-primary" style="display: none;" data-toggle="modal" data-target="#userModal"></button>
+  <button type="button" id="userModalhide" class="btn" style="display: none;" data-toggle="modal" data-target="#userModal"></button>
   
   <!-- Modal -->
   <div class="modal fade" id="userModal" role="dialog">
@@ -86,7 +86,7 @@
                       
                       <div class="col-md-12" style="background-color: rgb(228, 224, 224);"  >
                           <br/><strong>
-                          <span class="col-form-label"><button type="button" class="btn btn-primary" (click)=selectedParent(item)> Parent Task Name: {{item.parentTaskName}}</button></span><br/>
+                          <span class="col-form-label"><button type="button" class="btn" (click)=selectedParent(item)> Parent Task Name: {{item.parentTaskName}}</button></span><br/>
                         </strong>
                       </div>
                       
@@ -100,7 +100,7 @@
       
     </div>
   </div>
-  <button type="button" id="submitModalhide" class="btn btn-primary"  style="display: none;" data-toggle="modal" data-target="#submitModal"></button>
+  <button type="button" id="submitModalhide" class="btn"  style="display: none;" data-toggle="modal" data-target="#submitModal"></button>
   <div class="modal fade" role="dialog" id="submitModal" tabindex="-1">
       <div class="modal-dialog">
         <div class="modal-content">
@@ -115,7 +115,7 @@
           </div>
           <!-- Modal footer -->
           <div class="modal-footer">
-            <button type="button" class="btn btn-danger" data-dismiss="modal" (click)=resetButton()>Back To Add Task</button>
+            <button type="button" class="btn" data-dismiss="modal" (click)=resetButton()>Back To Add Task</button>
           </div>
         </div>
       </div>

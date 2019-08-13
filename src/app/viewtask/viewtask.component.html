@@ -9,9 +9,9 @@
                         <input type="text" class="form-control" id="searchProject" name="searchProject" #searchProject="ngModel" [(ngModel)]="searchProjects" placeholder="Search Project">    
                     </div>
                 <div class="col-md-3">
-                    <button type="button" class="col-sm-4  btn btn-danger" style="border-radius: 45%;" (click)=getProjectPopup()>Search</button>
+                    <button type="button" class="col-sm-4  btn" style="" (click)=getProjectPopup()>Search</button>
                 </div>
-                <button type="button" id="projectModalhide" class="btn btn-primary" style="display: none;" data-toggle="modal" data-target="#projectModal"></button>
+                <button type="button" id="projectModalhide" class="btn" style="display: none;" data-toggle="modal" data-target="#projectModal"></button>
             </div>
         </div>
         <div class="row">
@@ -51,8 +51,8 @@
                 <div class="col-md-2">{{task.startDate | date:'dd-MM-yyyy'}}</div>
                 <div class="col-md-2">{{task.endDate | date:'dd-MM-yyyy'}}</div>
                 <div *ngIf="task.status === 'A'">
-                    <button type="button" (click)="editTask(task)" class="btn btn-success">Edit</button>
-                    <button type="button" class="btn btn-success" (click)="endTask(task)">End Task</button>
+                    <button type="button" (click)="editTask(task)" class="btn">Edit</button>
+                    <button type="button" class="btn" (click)="endTask(task)">End Task</button>
                 </div>
             </div>
             <hr>
@@ -78,7 +78,7 @@
                         <br/>
                         <strong>
                             <span class="col-form-label">
-                                <button type="button" class="btn btn-primary" (click)=selectedProject(item)> Project Name: {{item.projectName}}</button>
+                                <button type="button" class="btn" (click)=selectedProject(item)> Project Name: {{item.projectName}}</button>
                             </span>
                             <br/>
                         </strong>
@@ -95,7 +95,7 @@
     </div>
 </div>
 
-<button type="button" id="submitModalhide" class="btn btn-primary"  style="display: none;" data-toggle="modal" data-target="#submitModal"></button>
+<button type="button" id="submitModalhide" class="btn"  style="display: none;" data-toggle="modal" data-target="#submitModal"></button>
 <div class="modal fade" role="dialog" id="submitModal" tabindex="-1">
     <div class="modal-dialog">
       <div class="modal-content">
@@ -110,7 +110,7 @@
         </div>
         <!-- Modal footer -->
         <div class="modal-footer">
-          <button type="button" class="btn btn-danger" data-dismiss="modal" (click)=resetButton()>Back To View Task</button>
+          <button type="button" class="btn" data-dismiss="modal" (click)=resetButton()>Back To View Task</button>
         </div>
       </div>
     </div>

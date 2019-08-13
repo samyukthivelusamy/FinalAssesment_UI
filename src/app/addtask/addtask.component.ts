@@ -64,7 +64,7 @@ export class AddtaskComponent implements OnInit {
     console.log(this.tempProjectsList);
     for ( var i = 0; i < this.tempProjectsList.length; i++)
     {
-      if(this.tempProjectsList[i].projectName.toLowerCase().indexOf(this.searchProjects.toLowerCase()) > -1){
+      if(this.tempProjectsList[i].projectName.indexOf(this.searchProjects.toLowerCase()) > -1){
         this.projectsList.push(this.tempProjectsList[i]);
       }
     }

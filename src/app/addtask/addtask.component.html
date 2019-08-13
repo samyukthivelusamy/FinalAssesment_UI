@@ -7,7 +7,7 @@
         <div class="row">
             <label for="projectName" class="col-md-4">Project:</label>
             <input type="text" class="col-md-5" id="searchProject" name="searchProject" #searchProject="ngModel" [(ngModel)]="projectName" placeholder="Search Project">    
-            <button type="button" class="col-md-1  btn btn-danger" style="border-radius: 45%;margin-left:20px" (click)=getProjectPopup()>Search</button>
+            <button type="button" class="col-md-1  btn" style="margin-left:20px" (click)=getProjectPopup()>Search</button>
         </div>
         <br>  
       <div class="row">
@@ -32,7 +32,7 @@
       <div class="row">
         <label for="parentTask" class="col-md-4" >Parent Task</label>
         <input class="col-md-5" type="text" [(ngModel)]="task.parentTaskName"   name="parentName" id="parentName" required>
-        <button [disabled] = "!checkBoxSelect" type="button" class="col-md-1  btn btn-danger" style="border-radius: 45%;margin-left:20px" (click)=getParentPopup()>Search</button>
+        <button [disabled] = "!checkBoxSelect" type="button" class="col-md-1  btn" style="margin-left:20px" (click)=getParentPopup()>Search</button>
       </div>
       <br>
       <div class="row">
@@ -47,15 +47,15 @@
         <label for="user" class="col-md-4" >User:</label>
         <input class="col-md-5" type="text" [(ngModel)]="userName"   name="userName" id="userName" required>
 
-        <button type="button" class="col-md-1  btn btn-danger"  style="border-radius: 45%;margin-left:20px" (click)=getUserPopup()>Search</button>
+        <button type="button" class="col-md-1  btn"  style="margin-left:20px;" (click)=getUserPopup()>Search</button>
       </div>
     <br>
     <br>
     <div class="row">
         <div class="col-md-5"></div>
       <div class="col-md-6">
-      <button type="submit" class="btn btn-success" style="margin-right:20px" (click)="addTask()">Add Task</button>  
-      <button type="cancel"  style="margin-left:20px" class="btn btn-primary">Reset</button>
+      <button type="submit" class="btn" style="margin-right:20px" (click)="addTask()">Add Task</button>  
+      <button type="cancel"  style="margin-left:20px" class="btn">Reset</button>
       </div>
     </div>
       <br>
@@ -123,7 +123,7 @@
                       
                       <div class="col-md-12" style="background-color: rgb(228, 224, 224);"  >
                           <br/><strong>
-                          <span class="col-form-label"><button type="button" class="btn btn-primary" (click)=selectedParent(item)> Parent Task Name: {{item.parentTaskName}}</button></span><br/>
+                          <span class="col-form-label"><button type="button" class="btn" (click)=selectedParent(item)> Parent Task Name: {{item.parentTaskName}}</button></span><br/>
                         </strong>
                       </div>
                       
@@ -154,7 +154,7 @@
                         
                         <div class="col-md-12" style="background-color: rgb(228, 224, 224);"  >
                             <br/><strong>
-                            <span class="col-form-label"><button type="button" class="btn btn-primary" (click)=selectedUser(item)> Employee Id: {{item.employeeId}}</button></span><br/>
+                            <span class="col-form-label"><button type="button" class="btn" (click)=selectedUser(item)> Employee Id: {{item.employeeId}}</button></span><br/>
                             <span class="col-form-label">First Name: {{item.firstName}}</span><br/>
                             <span class="col-form-label">Last Name: {{item.lastName}}</span><br/><br/>
                           </strong>
@@ -171,7 +171,7 @@
       </div>
     </div>
   <!-- Modal default -->
-  <button type="button" id="submitModalhide" class="btn btn-primary"  style="display: none;" data-toggle="modal" data-target="#submitModal"></button>
+  <button type="button" id="submitModalhide" class="btn"  style="display: none;" data-toggle="modal" data-target="#submitModal"></button>
   <div class="modal fade" role="dialog" id="submitModal" tabindex="-1">
       <div class="modal-dialog">
         <div class="modal-content">
@@ -186,7 +186,7 @@
           </div>
           <!-- Modal footer -->
           <div class="modal-footer">
-            <button type="button" class="btn btn-danger" data-dismiss="modal" (click)=resetButton()>Back to Add Task</button>
+            <button type="button" class="btn" data-dismiss="modal" (click)=resetButton()>Back to Add Task</button>
           </div>
         </div>
       </div>

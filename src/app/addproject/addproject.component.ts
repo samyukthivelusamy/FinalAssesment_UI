@@ -61,7 +61,7 @@ export class AddprojectComponent implements OnInit {
   }
 
   addProject(): void {
-    console.log(this.project.projectName);
+    console.log(this.project.projectName +"\t mangerNm:");
         this.project.status='In-Progress';
        
         if(this.project.projectName != '' && this.project.managerName !='' && this.project.employeeId!=''){
